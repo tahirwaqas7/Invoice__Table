@@ -1,0 +1,108 @@
+:root {
+    /* color variables */
+    --primary: #81d4fa;
+    --primary-light: #e1f5fe;
+    --primary-dark: #4fc3f7;
+    --gray100: #f9fbff;
+    --gray150: #f4f6fb;
+    --gray200: #eef1f6;
+    --gray300: #e1e5ee;
+    --gray400: #767b91;
+    --gray500: #4f546c;
+    --gray600: #2a324b;
+    --gray700: #161d34;
+    --pending: #fff0c2;
+    --pending-font: #a68b00;
+    --unpaid: #ffcdd2;
+    --unpaid-font: #c62828;
+    --paid: #c8e6c9;
+    --paid-font: #388e3c;
+    --link: #2962ff;
+
+    /* border radius */
+    --radius: 0.2rem;
+}
+
+
+*,
+* ::before,
+* ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Mukta, sans-serif;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray500);
+    font-size: 0.9em;
+    background-color: var(--gray100);
+}
+
+table {
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px var(--gray300);
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+}
+
+table thead :nth-child(4) {
+    text-align: center;
+}
+
+table thead {
+    box-shadow: 0 5px 10px var(--gray300);
+}
+
+table th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+table td {
+    padding: 1rem 2rem;
+}
+
+table td a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+.status {
+    border-radius: var(--radius);
+    padding: 0.2rem 1rem;
+    text-align: center;
+}
+
+.status-unpaid {
+    background-color: var(--unpaid);
+    color: var(--unpaid-font);
+}
+
+.status-Paid {
+    background-color: var(--paid);
+    color: var(--paid-font);
+}
+
+.status-pending {
+    background-color: var(--pending);
+    color: var(--pending-font);
+}
+
+
+table .amount {
+    text-align: right;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--gray150);
+}
+
